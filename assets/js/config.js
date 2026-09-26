@@ -48,25 +48,46 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // 3. Trong nhóm App: Ẩn chat, email, events, elearning, kanban, social
+  // 3. Trong nhóm App: Ẩn chat, email, events, elearning, kanban, social (cả vertical nav và navbar-card-app)
   var appSelectorsToHide = [
     'a[href*="chat.html"]',
     'a[href*="#email"]',
     '#email',
+    'a[href*="/email/"]',
     'a[href*="#events"]',
     '#events',
+    'a[href*="/events/"]',
     'a[href*="#e-learning"]',
     '#e-learning',
+    'a[href*="/e-learning/"]',
     'a[href*="kanban.html"]',
     'a[href*="#social"]',
-    '#social'
+    '#social',
+    'a[href*="/social/"]'
   ];
-  var verticalNav = document.getElementById('navbarVerticalNav');
-  if (verticalNav) {
-    appSelectorsToHide.forEach(function (selector) {
-      verticalNav.querySelectorAll(selector).forEach(function (el) {
+  appSelectorsToHide.forEach(function (selector) {
+    document.querySelectorAll(selector).forEach(function (el) {
+      if (el.closest('.navbar-vertical, .navbar-top, .navbar-standard')) {
         el.style.display = 'none';
-      });
+      }
     });
-  }
+  });
+
+  // Ẩn tiêu đề mục con và cột E-learning/Events/Email trong mega-menu App ở top navbar
+  var appHeadersToHide = ['Social', 'E-Learning', 'Events', 'Email'];
+  document.querySelectorAll('.navbar-card-app p.nav-link').forEach(function (p) {
+    if (appHeadersToHide.indexOf(p.textContent.trim()) !== -1) {
+      p.style.display = 'none';
+    }
+  });
+  document.querySelectorAll('.navbar-card-app .col-6, .navbar-card-app .col-md-4').forEach(function (col) {
+    if (col.querySelector('a[href*="/e-learning/"]') && !col.querySelector('a[href*="calendar.html"]') && !col.querySelector('a[href*="/e-commerce/"]')) {
+      col.style.display = 'none';
+    }
+  });
+
+  // 4. Xóa/Ẩn card Purchase (Loving what you see?) trong navbar-vertical
+  document.querySelectorAll('.navbar-vertical .settings').forEach(function (el) {
+    el.remove();
+  });
 });

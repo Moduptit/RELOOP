@@ -41,6 +41,18 @@
 #navbarVerticalNav #e-learning,
 #navbarVerticalNav a[href*="kanban.html"],
 #navbarVerticalNav a[href*="#social"],
-#navbarVerticalNav #social {
+#navbarVerticalNav #social,
+.navbar-card-app a[href*="chat.html"],
+.navbar-card-app a[href*="kanban.html"],
+.navbar-card-app a[href*="/social/"],
+.navbar-card-app a[href*="/email/"],
+.navbar-card-app a[href*="/events/"],
+.navbar-card-app a[href*="/e-learning/"],
+.navbar-card-app .col-6:has(a[href*="/e-learning/"]) {
+  display: none !important;
+}
+
+/* Xóa/Ẩn phần Purchase (Loving what you see?) */
+.navbar-vertical .settings {
   display: none !important;
 }
