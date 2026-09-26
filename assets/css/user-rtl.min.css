@@ -1,0 +1,46 @@
+/* -------------------------------------------------------------------------- */
+/*                                Reloop Button                               */
+/* -------------------------------------------------------------------------- */
+/* prettier-ignore */
+
+/* Ẩn mục Pages */
+#navbarVerticalNav > .nav-item:has(#authentication),
+#navbarVerticalNav > .nav-item:has(#Layouts),
+#navbarVerticalNav > .nav-item:has(a[href*="starter.html"]),
+.navbar-nav .nav-item:has(> #pagess),
+.navbar-nav .nav-item:has(> a[id="pagess"]) {
+  display: none !important;
+}
+
+/* Ẩn toàn bộ mục Modules */
+#navbarVerticalNav > .nav-item:has(#forms),
+#navbarVerticalNav > .nav-item:has(#tables),
+#navbarVerticalNav > .nav-item:has(#charts),
+#navbarVerticalNav > .nav-item:has(#components),
+#navbarVerticalNav > .nav-item:has(#utilities),
+.navbar-nav .nav-item:has(> #moduless),
+.navbar-nav .nav-item:has(> a[id="moduless"]) {
+  display: none !important;
+}
+
+/* Ẩn toàn bộ mục Documentation */
+#navbarVerticalNav > .nav-item:has(#customization),
+#navbarVerticalNav > .nav-item:has(a[href*="getting-started.html"]),
+.navbar-nav .nav-item:has(> #documentations),
+.navbar-nav .nav-item:has(> a[id="documentations"]) {
+  display: none !important;
+}
+
+/* Trong phần App: Ẩn chat, email, events, elearning, kanban, social */
+#navbarVerticalNav a[href*="chat.html"],
+#navbarVerticalNav a[href*="#email"],
+#navbarVerticalNav #email,
+#navbarVerticalNav a[href*="#events"],
+#navbarVerticalNav #events,
+#navbarVerticalNav a[href*="#e-learning"],
+#navbarVerticalNav #e-learning,
+#navbarVerticalNav a[href*="kanban.html"],
+#navbarVerticalNav a[href*="#social"],
+#navbarVerticalNav #social {
+  display: none !important;
+}
