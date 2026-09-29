@@ -26154,6 +26154,9 @@ h5, .h5 {
 .navbar-vertical .navbar-vertical-toggle {
   display: none;
 }
+.navbar-vertical .settings {
+  display: none !important;
+}
 .navbar-vertical .settings .btn-close-reloop-container {
   position: absolute;
   left: 3px;

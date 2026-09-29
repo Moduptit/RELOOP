@@ -8151,7 +8151,7 @@ var leadConversionInit = function leadConversionInit() {
         },
         yAxis: {
           type: 'category',
-          data: ['kerry Ingram', 'Bradie Pitter', 'Harrington', 'Ashley Shaw', 'Jenny Horas', 'Chris Pratt'],
+          data: ['Nguyễn Thị Mai', 'Trần Minh Tuấn', 'Đỗ Hải Đăng', 'Vũ Hoàng Yến', 'Lê Thu Hà', 'Phạm Quang Huy'],
           axisLine: {
             show: false
           },
